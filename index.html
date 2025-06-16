@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>导航栏示例</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* 顶部导航栏样式 */
+    .navbar {
+      background-color: #3b6fc0; /* 蓝色背景 */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+      color: #f9ef65; /* 悬停变黄 */
+    }
+
+    .navbar a.active {
+      color: #ffffff; /* 当前页面显示为黄色 */
+    }
+
+    body {
+      margin: 0;
+    }
+
+    .content {
+      text-align: center;
+      margin-top: 30px;
+      font-family: Arial, sans-serif;
+    }
+
+    .content h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .content p {
+      font-size: 16px;
+      color: #333;
+    }
+  </style>
+
+<body>
+
+  <!-- 顶部导航栏 -->
+  <div class="navbar">
+    <a href="index.html" class="active">首页</a>
+    <a href="research.html">研究内容和成果</a>
+    <a href="cmee.html">CMEE LAB</a>
+  </div>
+
+ <!-- 顶部导航栏 -->
+<style>
+  .navbar a, .navbar button {
+    font-weight: bold; /* 字体加粗 */
+  }
+</style>
+</div>
+
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Arial', sans-serif;
+    }
+
+    .carousel-wrapper {
+      height: 400px; /* 你可以改为 100vh 实现全屏 */
+      background-color: #1a1a1a; /* <-- 可自定义背景色 */
+      overflow: hidden;
+    }
+
+    .carousel {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .slide {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .slide.active {
+      opacity: 1;
+      z-index: 1;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .overlay {
+      position: absolute;
+      bottom: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      color: #fff;
+      background: rgba(0,0,0,0.4);
+      padding: 15px 25px;
+      border-radius: 6px;
+    }
+
+    .overlay h2 { font-size: 1.8rem; margin-bottom: 8px; }
+    .overlay p { font-size: 1rem; }
+
+    .dots {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      z-index: 2;
+    }
+
+    .dot {
+      display: inline-block;
+      width: 10px; height: 10px;
+      margin: 0 5px;
+      background: #aaa;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .dot.active {
+      background: #fff;
+    }
+
+    .nav-buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      padding: 0 20px;
+      z-index: 2;
+    }
+
+    .nav-buttons button {
+      background: rgba(0,0,0,0.5);
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      padding: 8px;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+
+    /* 页面主体内容 */
+    .content {
+      padding: 30px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .content h1 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .content p {
+      line-height: 1.6;
+      color: #555;
+    }
+  </style>
+
+<body>
+
+<!-- 顶部轮播区域 -->
+<div class="carousel-wrapper" style="background-color: #003366;"> <!-- 修改此处颜色 -->
+  <div class="carousel" id="carousel">
+    <!-- slides 会由 JS 动态插入 -->
+  </div>
+  <div class="nav-buttons">
+    <button onclick="prevSlide()">❮</button>
+    <button onclick="nextSlide()">❯</button>
+  </div>
+  <div class="dots" id="dots"></div>
+</div>
+
+
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9fafb;
+      color: #111827;
+    }
+
+    header {
+      background-color: #1e3a8a;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .tabs {
+      display: flex;
+      border-bottom: 2px solid #e5e7eb;
+      margin-bottom: 30px;
+    }
+
+    .tab {
+      padding: 10px 20px;
+      cursor: pointer;
+      font-weight: bold;
+      color: #1e3a8a;
+      border-bottom: 3px solid transparent;
+      transition: 0.2s;
+    }
+
+    .tab.active {
+      border-bottom-color: #3b82f6;
+      color: #111827;
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .intro, .members {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 40px;
+    }
+
+    .intro-text {
+      flex: 1 1 500px;
+    }
+
+    .intro-text h2 {
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+
+    .intro-text p {
+      line-height: 1.8;
+      color: #374151;
+    }
+
+    .intro-image {
+      flex: 1 1 400px;
+    }
+
+    .intro-image img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .members-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 20px;
+    }
+
+    .member-card {
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .member-card img {
+  width: 120px;
+  height: 160px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+
+    .member-card h4 {
+      margin: 5px 0;
+      font-size: 16px;
+    }
+
+    .member-card p {
+      color: #6b7280;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .intro {
+        flex-direction: column;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+
+
+<div class="container">
+  <!-- 选项卡 -->
+  <div class="tabs">
+    <div class="tab active" data-tab="intro">团队简介</div>
+    <div class="tab" data-tab="members">团队成员</div>
+  </div>
+
+  <!-- 内容块：团队简介 -->
+  <div class="tab-content active" id="intro">
+    <div class="intro">
+      <div class="intro-text">
+        <h2>流体测量技术组是一支富有创新活力的年轻队伍，成立于2022年12月。</h2>
+        <p>
+          为进一步拓展大飞机创新谷技术研发与专业能力建设支撑功能，流体测量技术组建设以“实际需求”为首要目标导向，开展流量测量技术的进一步研究，掌控2.5级能力，支撑自主研产设计对未来技术开展验证、提升测量精度、培养高层技术指导与竞争优势。
+        </p>
+      </div>
+      <div class="intro-image">
+        <img src="团队合影.jpg" alt="团队合影" />
+      </div>
+    </div>
+  </div>
+
+  <!-- 内容块：团队成员 -->
+  <div class="tab-content" id="members">
+    <div class="members-grid">
+      <div class="member-card">
+        <img src="胡晓莉.png" alt="成员1">
+        <h4>胡晓莉</h4>
+        <p>组长</p>
+      </div>
+      <div class="member-card">
+        <img src="邓杨.png" alt="成员2">
+        <h4>邓杨</h4>
+        <p>博士</p>
+      </div>
+      <div class="member-card">
+        <img src="徐晨悦.jpg" alt="成员3">
+        <h4>徐晨悦</h4>
+        <p>工程师</p>
+      </div>
+     
+     
+      <div class="member-card">
+        <img src="苏璟雯.jpg" alt="成员5">
+        <h4>苏璟雯</h4>
+        <p>工程师</p>
+      </div>
+      <div class="member-card">
+        <img src="潘亚平.jpg" alt="成员6">
+        <h4>潘亚平</h4>
+        <p>工程师</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 脚本：选项卡切换 -->
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const contents = document.querySelectorAll('.tab-content');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      // 取消所有激活状态
+      tabs.forEach(t => t.classList.remove('active'));
+      contents.forEach(c => c.classList.remove('active'));
+
+      // 激活当前
+      tab.classList.add('active');
+      document.getElementById(tab.dataset.tab).classList.add('active');
+    });
+  });
+</script>
+
+<hr style="border: none; border-top: 1px solid #e2e8f0; margin: 60px 0;">
+
+<!-- JS 脚本部分 -->
+<script>
+  const images = [
+    { src: '流体测量.jpg', title: '幻灯片一', description: '这是第一张图片的文字叠加' },
+    { src: '传感器.jpg', title: '幻灯片二', description: '第二张图也有说明文字' },
+    { src: '六自由度.jpg', title: '幻灯片三', description: '展示更多精彩内容' }
+  ];
+
+  const carousel = document.getElementById('carousel');
+  const dotsContainer = document.getElementById('dots');
+
+  let currentIndex = 0;
+
+  function createSlides() {
+    images.forEach((img, index) => {
+      const slide = document.createElement('div');
+      slide.className = 'slide' + (index === 0 ? ' active' : '');
+      slide.innerHTML = `
+        <img src="${img.src}" alt="${img.title}">
+        <div class="overlay">
+          <h2>${img.title}</h2>
+          <p>${img.description}</p>
+        </div>
+      `;
+      carousel.appendChild(slide);
+
+      const dot = document.createElement('span');
+      dot.className = 'dot' + (index === 0 ? ' active' : '');
+      dot.onclick = () => showSlide(index);
+      dotsContainer.appendChild(dot);
+    });
+  }
+
+  function showSlide(index) {
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    slides.forEach((s, i) => s.classList.toggle('active', i === index));
+    dots.forEach((d, i) => d.classList.toggle('active', i === index));
+    currentIndex = index;
+  }
+
+  function nextSlide() {
+    showSlide((currentIndex + 1) % images.length);
+  }
+
+  function prevSlide() {
+    showSlide((currentIndex - 1 + images.length) % images.length);
+  }
+
+  createSlides();
+  setInterval(nextSlide, 5000);
+</script>
+
+
+<head>
+  <meta charset="UTF-8">
+  
+  <title>技术体系模块</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- AOS 动画库 -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      scroll-behavior: smooth;
+    }
+  </style>
+
+<body class="bg-white text-gray-800">
+
+  <!-- 技术体系模块 -->
+  <section class="py-16 px-6 bg-white" id="tech-system">
+    <h2 class="text-3xl font-bold text-center mb-10">技术体系</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <!-- 测量技术：标题在图上方，无描述 -->
+      <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+        <span class="inline-block bg-blue-500 text-white px-4 py-1 rounded-full text-sm mb-1">测量技术</span>
+        <h3 class="text-base font-semibold text-gray-800 mb-1">测量数据采集与处理</h3>
+        <img src="测量技术.png" class="mx-auto rounded shadow" alt="测量技术">
+      </div>
+
+      <!-- 设计 -->
+      <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+        <span class="inline-block bg-blue-500 text-white px-4 py-1 rounded-full text-sm mb-1">设计</span>
+        <img src="设计1.JPG" class="mx-auto rounded shadow mb-1" alt="设计">
+        <p class="text-sm text-gray-600">设备结构与传感器设计优化。</p>
+      </div>
+
+
+      <!-- 解析算法 -->
+      <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+        <span class="inline-block bg-blue-500 text-white px-4 py-1 rounded-full text-sm mb-1">解析算法</span>
+        <img src="解析算法1.JPG" class="mx-auto rounded shadow mb-1" alt="解析算法">
+        <p class="text-sm text-gray-600">使用神经网络算法分析数据。</p>
+      </div>
+
+      <!-- 机理研究：标题在图上方，无描述 -->
+      <div class="text-center" data-aos="fade-up" data-aos-delay="500">
+        <span class="inline-block bg-blue-500 text-white px-4 py-1 rounded-full text-sm mb-1">机理研究</span>
+        <h3 class="text-base font-semibold text-gray-800 mb-1">物理机制建模分析</h3>
+        <img src="机理研究.JPG" class="mx-auto rounded shadow" alt="机理研究">
+      </div>
+
+
+     <!-- 实验 -->
+      <div class="text-center" data-aos="fade-up" data-aos-delay="600">
+        <span class="inline-block bg-blue-500 text-white px-4 py-1 rounded-full text-sm mb-1">实验</span>
+        <img src="实验1.JPG" class="mx-auto rounded shadow mb-1" alt="设计">
+        <p class="text-sm text-gray-600">设备结构与传感器设计优化。</p>
+      </div>
+
+      <!-- 模型 -->
+      <div class="text-center" data-aos="fade-up" data-aos-delay="700">
+        <span class="inline-block bg-blue-500 text-white px-4 py-1 rounded-full text-sm mb-1">解析算法</span>
+        <img src="模型1.JPG" class="mx-auto rounded shadow mb-1" alt="解析算法">
+        <p class="text-sm text-gray-600">使用神经网络算法分析数据。</p>
+      </div>
+  <!-- AOS 动画初始化 -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  </script>
+
+
+
+<section class="module-a"></section>
+
+
+<section style="padding: 60px 20px; max-width: 1200px; margin: 0 auto; text-align: center;">
+  <h2 style="font-size: 32px; font-weight: bold; color: #1a202c; margin-bottom: 12px;">合作方</h2>
+  <p style="font-size: 18px; color: #333; font-weight: 600; margin-bottom: 40px;">
+    进行光纤传感项目深度合作。
+  </p>
+
+
+  <div class="logo-scroll-wrapper">
+    <div class="logo-scroll-container">
+      <div class="logo-row">
+        <img src="北航.jpg" alt="Logo 1" class="logo logo-animate">
+        <img src="武汉理工.jpg" alt="Logo 2" class="logo logo-animate">
+        <img src="大连理工.jpg" alt="Logo 3" class="logo logo-animate">
+        <img src="拜安.jpg" alt="Logo 4" class="logo logo-animate">
+        <img src="利龙.jpg" alt="Logo 5" class="logo logo-animate">
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .cooperation-section {
+    max-width: 1200px;
+    margin: 120px auto 0;
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fff;
+  }
+
+  .cooperation-section h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 12px;
+  }
+
+  .cooperation-section .description {
+    font-size: 18px;
+    font-weight: 500;
+    color: #ece9e9;
+    margin-bottom: 30px;
+  }
+
+  /* 包裹滚动容器，确保它也在居中区域内 */
+  .logo-scroll-wrapper {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .logo-scroll-container {
+    display: flex;
+    gap: 40px;
+    padding: 20px;
+    background-color: #fafafa;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    min-width: max-content;
+    margin: 0 auto;
+  }
+
+  .logo {
+    height: 100px;
+    width: auto;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    flex-shrink: 0;
+  }
+
+  .logo.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .logo-scroll-wrapper::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .logo-scroll-wrapper::-webkit-scrollbar-thumb {
+    background: #ffffff;
+    border-radius: 4px;
+  }
+
+  .logo-scroll-wrapper::-webkit-scrollbar-track {
+    background: #eee;
+  }
+</style>
+
+<script>
+  const logos = document.querySelectorAll('.logo-animate');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, index * 150);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  logos.forEach(logo => observer.observe(logo));
+</script>
+
+</section>
+  <title>功能模块展示</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+    }
+
+    section.feature-section {
+      max-width: 1200px;
+      margin: 100px auto;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .feature-section h2 {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 12px;
+      color: #ffffff;
+    }
+
+    .feature-section .description {
+      font-size: 18px;
+      color: #ffffff;
+      margin-bottom: 40px;
+    }
+
+    .feature-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 40px;
+    }
+
+    .feature-box {
+      flex: 1 1 300px;
+      max-width: 300px;
+      padding: 20px;
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      text-align: center;
+    }
+
+    .feature-icon {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin: 0 auto 20px;
+      display: block;
+    }
+
+    .feature-box h3 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #4c4949;
+    }
+
+    .feature-box p {
+      font-size: 16px;
+      color: #069bf2;
+    }
+
+    /* 可选：图片 hover 放大效果 */
+    .feature-icon:hover {
+      transform: scale(1.1);
+      transition: transform 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="feature-section">
+    <h2>合作方技术特点</h2>
+  
+    <div class="feature-row">
+      <div class="feature-box">
+        <img src="icon3.jpg" alt="图标1" class="feature-icon" />
+        <h3>先进传感器技术</h3>
+        <p>基于光纤与MEMS技术，提升传感系统灵敏度和稳定性。</p>
+      </div>
+      <div class="feature-box">
+        <img src="icon5.png" alt="图标2" class="feature-icon" />
+        <h3>高精度数据采集</h3>
+        <p>支持多通道数据输入，适用于多种复杂应用场景。</p>
+      </div>
+      <div class="feature-box">
+        <img src="icon8.JPG" alt="图标3" class="feature-icon" />
+        <h3>模块化集成设计</h3>
+        <p>便于嵌入多种系统平台，提升部署灵活性与效率。</p>
+      </div>
+    </div>
+  </section>
+
+
+</section>
+
+<style>
+  .feature-section {
+    padding: 80px 20px;
+    background-color: #ddd4d4;
+    text-align: center;
+  }
+
+  .feature-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 60px;
+  }
+
+  .feature-box {
+    flex: 1 1 300px;
+    max-width: 300px;
+  }
+
+  .feature-icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 40px;
+  }
+
+  .feature-box h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1c1a1a;
+    margin-bottom: 10px;
+  }
+
+  .feature-box p {
+    font-size: 16px;
+    color: #636567de;
+  }
+
+  @media (max-width: 768px) {
+    .feature-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>
+
+
+
+
+
+<head>
+
+<!-- 首页模块 -->
+<section id="top" class="homepage-section">
+  <div class="homepage-card">
+    <h1>欢迎来到我们的研究主页</h1>
+    <p class="subtitle">探索最前沿的科研进展与合作成果</p>
+    <img src="班组简介.JPG" alt="研究展示图" class="homepage-image">
+  </div>
+</section>
+<!-- 跳转选项区 -->
+<section class="jump-section">
+  <div class="jump-box" onclick="location.href='#about'">研究简介</div>
+  <div class="jump-box" onclick="location.href='#members'">团队成员</div>
+  <div class="jump-box" onclick="location.href='#results'">研究成果</div>
+</section>
+<!-- 研究方向选项卡 -->
+<section class="research-tabs">
+  <h2 class="section-title">科学研究</h2>
+  <div class="card-container">
+    
+    <div class="research-card" onclick="location.href='#liquid1'">
+      <div class="card-header">流体测量新技术研究<br><strong>液位测量系统开发</strong></div>
+      <ul>
+        <li>光纤传感器</li>
+        <li>超声波传感器</li>
+        <li>ECT技术</li>
+      </ul>
+    </div>
+
+    <div class="research-card" onclick="location.href='#liquid2'">
+      <div class="card-header">流体测量新技术研究<br><strong>流量测量系统开发</strong></div>
+      <p>
+        验证光纤-压力流量传感器与涡轮流量传感器的性能。<br>
+        此外，利用实验平台还可优化迭代新型流量传感器的设计方案。
+      </p>
+    </div>
+
+    <div class="research-card" onclick="location.href='#analysis'">
+      <div class="card-header">流体相关型号问题<br><strong>复现与分析</strong></div>
+      <ul>
+        <li>APU系统</li>
+        <li>燃油系统</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<hr style="border: none; border-top: 1px solid #e2e8f0; margin: 60px 0;">
+<!-- 样式 -->
+<style>
+  .research-tabs {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f5faff;
+  }
+
+  .section-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .research-card {
+    width: 280px;
+    background-color: #fff6e6;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    padding-bottom: 20px;
+  }
+
+  .research-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .card-header {
+    background-color: #3f70e3;
+    color: white;
+    padding: 16px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.5;
+    border-radius: 12px 12px 0 0;
+  }
+
+  .research-card ul, .research-card p {
+    text-align: left;
+    margin: 15px 20px 0;
+    color: #333;
+    font-size: 14px;
+  }
+
+  .research-card ul li {
+    margin-bottom: 6px;
+    list-style: disc;
+    padding-left: 10px;
+  }
+</style>
+
+<!-- 对应跳转目标区域 -->
+<section id="about">
+  <h2>研究简介</h2>
+  <p>这里是关于研究内容的介绍。</p>
+</section>
+
+<section id="members">
+  <h2>团队成员</h2>
+  <p>这里是团队成员的详细介绍。</p>
+</section>
+
+<section id="results">
+  <h2>研究成果</h2>
+  <p>这里展示了我们的研究成果和论文。</p>
+</section>
+
+<!-- 样式区 -->
+<style>
+  html {
+    scroll-behavior: smooth; /* 平滑滚动 */
+  }
+
+  .jump-section {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+    background: #87c3ff;
+  }
+
+  .jump-box {
+    background-color: #4f68e4;
+    color: white;
+    padding: 20px 30px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    transition: transform 0.2s, background-color 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .jump-box:hover {
+    background-color: #3d52c3;
+    transform: translateY(-4px);
+  }
+
+  section[id] {
+    padding: 100px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+  }
+
+  section[id] h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+</style>
+
+<style>
+  .homepage-section {
+    background: linear-gradient(to bottom right, #e8f0ff, #f9fcff); /* 柔和渐变背景 */
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .homepage-card {
+    background-color: white;
+    max-width: 800px;
+    width: 100%;
+    padding: 40px 30px;
+    text-align: center;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* 卡片阴影 */
+    animation: fadeIn 0.8s ease;
+  }
+
+  .homepage-card h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  .homepage-card .subtitle {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 30px;
+  }
+
+  .homepage-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+
+
+  <!-- 选项卡容器 -->
+  <div class="tab-container">
+    <div class="tab-buttons">
+      <button class="tab-link active" onclick="openTab(event, 'tab1')">项目简介</button>
+      <button class="tab-link" onclick="openTab(event, 'tab2')">设备展示</button>
+      <button class="tab-link" onclick="openTab(event, 'tab3')">团队成员</button>
+    </div>
+
+    <div id="tab1" class="tab-content active">
+      <h2>项目简介</h2>
+      <p>我们专注于流体测量技术的研发，致力于为工业和科研提供高精度、高可靠性的测量方案。</p>
+      <ul>
+        <li>精密流量计校准</li>
+        <li>多通道温压补偿系统</li>
+        <li>高速数据采集与分析</li>
+      </ul>
+    </div>
+
+    <div id="tab2" class="tab-content">
+      <h2>设备展示</h2>
+      <p>我们拥有先进的流量检测实验平台，涵盖从微流量到大流量的各类传感器。</p>
+      <img src="https://via.placeholder.com/600x300?text=设备图片示例" alt="设备图片">
+    </div>
+
+    <div id="tab3" class="tab-content">
+      <h2>团队成员</h2>
+      <p>我们的技术团队由资深工程师、研究人员和软件开发者组成。</p>
+      <ul>
+        <li>张工 - 流体控制专家</li>
+        <li>李博士 - 系统架构设计</li>
+        <li>王工 - 软件与UI开发</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 联系我们弹窗 -->
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h3>联系我们</h3>
+      <p>邮箱：fluid@lab.com</p>
+      <p>电话：+86 123 4567 8901</p>
+      <p>地址：北京市海淀区技术研发中心</p>
+    </div>
+  </div>
+
+  <!-- JavaScript 功能 -->
+  <script>
+    function openTab(evt, tabId) {
+      const tabContents = document.querySelectorAll('.tab-content');
+      const tabLinks = document.querySelectorAll('.tab-link');
+
+      tabContents.forEach(content => content.classList.remove('active'));
+      tabLinks.forEach(link => link.classList.remove('active'));
+
+      document.getElementById(tabId).classList.add('active');
+      evt.currentTarget.classList.add('active');
+    }
+
+    function openModal() {
+      document.getElementById('contactModal').style.display = 'block';
+    }
+
+    function closeModal() {
+      document.getElementById('contactModal').style.display = 'none';
+    }
+
+    // 点击窗口外部关闭弹窗
+    window.onclick = function(event) {
+      const modal = document.getElementById('contactModal');
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+
+
+
+  <!-- 主体内容 -->
+  <div class="content">
+    <h1>欢迎来到我的主页</h1>
+    <p>点击上方导航栏可以打开新的页面。</p>
+  </div>
+
+
+
+<head>
+  <style>
+    .tab {
+      display: flex;
+    }
+    .tab button {
+      padding: 10px 20px;
+      cursor: pointer;
+      border: none;
+      background-color: #ddd;
+      margin-right: 5px;
+    }
+    .tab button.active {
+      background-color: #999;
+      color: white;
+    }
+    .tabcontent {
+      display: none;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="tab">
+  <button class="tablinks active" onclick="openTab(event, 'Home')">首页</button>
+  <button class="tablinks" onclick="openTab(event, 'About')">关于</button>
+  <button class="tablinks" onclick="openTab(event, 'Contact')">联系</button>
+</div>
+
+<div id="Home" class="tabcontent" style="display: block;">
+  <h3>首页内容</h3>
+  <p>这里是首页的内容。</p>
+</div>
+
+<div id="About" class="tabcontent">
+  <h3>关于内容</h3>
+  <p>这里是关于的内容。</p>
+</div>
+
+<div id="Contact" class="tabcontent">
+  <h3>联系内容</h3>
+  <p>这里是联系的内容。</p>
+</div>
+
+<script>
+function openTab(evt, tabName) {
+  var i, tabcontent, tablinks;
+
+  // 隐藏所有内容
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // 去除所有按钮的active样式
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].classList.remove("active");
+  }
+
+  // 显示当前选中的tab内容
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.classList.add("active");
+}
+</script>
+
+
+
+</body>
+</html>
+
+
+  

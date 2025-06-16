@@ -1,0 +1,25 @@
+bbody {
+  font-family: "Microsoft YaHei", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f3f3f3;
+  color: #333;
+}
+
+header {
+  background-color: #004aad;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.logo {
+  height: 60px;
+}
+
+section {
+  padding: 30px;
+  background: white;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 

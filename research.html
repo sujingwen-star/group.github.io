@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>导航栏示例</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* 顶部导航栏样式 */
+    .navbar {
+      background-color: #3b6fc0; /* 蓝色背景 */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+      color: #ffd700; /* 悬停变黄 */
+    }
+
+    .navbar a.active {
+      color: #ffffff; /* 当前页面显示为黄色 */
+    }
+
+    body {
+      margin: 0;
+    }
+
+    .content {
+      text-align: center;
+      margin-top: 30px;
+      font-family: Arial, sans-serif;
+    }
+
+    .content h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .content p {
+      font-size: 16px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 顶部导航栏 -->
+  <div class="navbar">
+    <a href="index.html" class="active">首页</a>
+    <a href="research.html">研究内容和成果</a>
+    <a href="cmee.html">CMEE LAB</a>
+  </div>
+
+  <!-- 页面内容 -->
+  <div class="content">
+    <h2>班组简介</h2>
+    <p>流体测量技术组是一支富有创新活力的年轻队伍，成立于2022年12月。</p>
+  </div>
+
+</body>
+</html>
