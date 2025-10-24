@@ -91,7 +91,7 @@ ul {
     font-weight: 300;
 }
 .clr {
-    color: #fff;
+    color: #000000;
 }
 /*--nav bar-Code --*/
 .banner-up{
@@ -599,7 +599,7 @@ margin:0 auto;}
 /*--//about--*/
 /*--services-*/
 .services{
-    background: url(../images/g12.jpeg)no-repeat center;
+    background: url(../images/g21.jpeg)no-repeat center;
 	    background-size: cover;
 }
 .its-banner-grid {
@@ -911,10 +911,10 @@ blockquote {
 text-transform: uppercase;
     font-weight: 500;}
 .thumbnail .caption p{
-    font-size: 18px;
+    font-size:23px;
     letter-spacing: 2px;
-    color: #000;
-    line-height: 33px;
+    color: #000000;
+    line-height: 50px;
 	text-transform: uppercase;
 }
 .client-img {
@@ -1991,7 +1991,7 @@ a.w3_play_icon1 {
     padding: 0em;
 }
 .adjust2 h6 {
-    font-size: 18px;
+    font-size: 28px;
 }
 .about, .static, .services,.parnters, .buttom-w3, .service-inner, .testimonials, .price-table, .gallery, .icons-border, .service-inner, .ser-img-grids, .contact, .service-inn {
     padding: 3.2em 0;
